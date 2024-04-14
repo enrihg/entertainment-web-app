@@ -1,0 +1,41 @@
+.search {
+    padding: 1.5rem 1rem;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search button {
+    background: none;
+    border: none;
+    height: 1.5rem;
+}
+
+.search button img {
+    height: 1.5rem;
+}
+
+/*Screen readers only*/
+.search label {
+    position: absolute;
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip-path: rect(0, 0, 0, 0); 
+    white-space: nowrap; 
+    border-width: 0;
+}
+
+.search input {
+    width: 100%;
+    background-color: var(--clr-900);
+    caret-color: var(--clr-primary);
+    color: var(--clr-100);
+    border: none;
+    outline: none;
+}
