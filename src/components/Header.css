@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    background-color: var(--clr-700);
+}
+
+.header .logo {
+    height: 1.25rem;
+}
+
+.header .avatar {
+    height: 1.5rem;
+}
+
+.header nav {
+    display: flex;
+    gap: 1.5rem;
+    padding-block: 1.25rem;
+}
+
+.header nav img {
+    height: 1rem;
+}
