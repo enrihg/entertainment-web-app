@@ -1,0 +1,41 @@
+.movie {
+    width: fit-content;
+}
+
+.thumbnail {
+    height: 220px;
+    position: relative;
+    width: fit-content;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.thumbnail > img {
+    border-radius: 8px;
+}
+
+.info {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+.info > span {
+    margin-right: 18px;
+}
+
+.bookmarkIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: black;
+    opacity: 30%;
+    border: 0;
+    padding: 10px;
+    border-radius: 50%;
+}
