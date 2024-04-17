@@ -1,4 +1,4 @@
-import style from "./Movie.module.css"
+import style from "./Show.module.css"
 
 type ComponentProps = {
     category: string,
@@ -20,12 +20,12 @@ type ComponentProps = {
     year: number,
 }
 
-function Movie({ category, isBookmarked, isTrending, rating, title, thumbnail, year }: ComponentProps) {
+function Show({ category, isBookmarked, isTrending, rating, title, thumbnail, year }: ComponentProps) {
     console.log(thumbnail)
     console.log(isBookmarked)
     console.log(isTrending)
     return (
-        <article className={style.movie}>
+        <article className={style.show}>
             <div className={style.thumbnail}>
                 <img src={`${thumbnail?.regular?.small}`} alt="picture" />
                 <button className={style.bookmarkIcon}><img src="/public/assets/icon-bookmark-empty.svg" alt="bookmark icon" /></button>
@@ -37,4 +37,4 @@ function Movie({ category, isBookmarked, isTrending, rating, title, thumbnail, y
 
 }
 
-export default Movie
+export default Show
