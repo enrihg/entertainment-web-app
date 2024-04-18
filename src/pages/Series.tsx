@@ -13,13 +13,7 @@ function Series() {
                 {data.map((movie) => (
                     movie.category === "TV Series" && <Show
                         // key={???}
-                        title={movie.title}
-                        year={movie.year}
-                        category={movie.category}
-                        rating={movie.rating}
-                        isTrending={movie.isTrending}
-                        isBookmarked={movie.isBookmarked}
-                        thumbnail={movie.thumbnail}
+                        movie={movie}
                     />
                 ))}
 

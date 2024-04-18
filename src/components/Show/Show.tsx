@@ -1,29 +1,29 @@
 import style from "./Show.module.css"
 
 type ComponentProps = {
-    category: string,
-    isBookmarked: boolean,
-    isTrending?: boolean,
-    rating: string,
-    thumbnail?: {
-        trending?: {
-            small: string,
-            large: string,
+    movie: {
+        category: string,
+        isBookmarked: boolean,
+        isTrending?: boolean,
+        rating: string,
+        thumbnail?: {
+            trending?: {
+                small: string,
+                large: string,
+            },
+            regular?: {
+                small: string,
+                medium: string,
+                large: string
+            }
         },
-        regular?: {
-            small: string,
-            medium: string,
-            large: string
-        }
-    },
-    title: string,
-    year: number,
+        title: string,
+        year: number,
+    }
 }
 
-function Show({ category, isBookmarked, isTrending, rating, title, thumbnail, year }: ComponentProps) {
-    console.log(thumbnail)
-    console.log(isBookmarked)
-    console.log(isTrending)
+function Show({ movie }: ComponentProps) {
+    const { category, rating, thumbnail, title, year } = movie;
     return (
         <article className={style.show}>
             <div className={style.thumbnail}>
@@ -34,7 +34,6 @@ function Show({ category, isBookmarked, isTrending, rating, title, thumbnail, ye
             <h3>{title}</h3>
         </article>
     )
-
 }
 
 export default Show
