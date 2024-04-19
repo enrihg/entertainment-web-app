@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header"
 import Search from "../components/Search/Search"
+import DisplayShows from "../components/DisplayShows/DisplayShows.tsx"
 import data from "../data.ts"
 import Show from "../components/Show/Show.tsx"
 
@@ -9,7 +10,7 @@ function Home() {
             <Header />
             <main>
                 <Search />
-                <section>
+                <DisplayShows>
                     <h1>Trending</h1>
                     {data.map((movie) => (
                         movie.isTrending && <Show
@@ -17,11 +18,11 @@ function Home() {
                             movie={movie}
                         />
                     ))}
-                </section>
-                <section>
+                </DisplayShows>
+                <DisplayShows>
                     <h2>Recommended for you</h2>
                     <p>????????????</p>
-                </section>
+                </DisplayShows>
             </main>
         </>
     )

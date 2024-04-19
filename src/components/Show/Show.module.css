@@ -1,9 +1,9 @@
 .show {
-    width: fit-content;
+    /* width: fit-content; */
 }
 
 .thumbnail {
-    height: 220px;
+    /* height: 220px; */
     position: relative;
     width: fit-content;
     border-radius: 8px;
@@ -12,6 +12,7 @@
 
 .thumbnail > img {
     border-radius: 8px;
+    width: 100%;
 }
 
 .info {
@@ -29,8 +30,8 @@
 .bookmarkIcon {
     cursor: pointer;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
     height: 2rem;
     width: 2rem;
     background-color: black;

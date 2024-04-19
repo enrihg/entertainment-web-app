@@ -1,0 +1,17 @@
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h1, h2 {
+    font-size: 1.25rem;
+    font-weight: 200;
+    grid-column-start: span 2;
+}
+
+h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
