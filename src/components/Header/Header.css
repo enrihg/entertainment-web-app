@@ -24,3 +24,30 @@
 .navbar img {
     height: 1rem;
 }
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .navbar {
+        border-radius: 10px;
+    }
+
+    .navbar .logo {
+        height: 2rem;
+    }
+
+    .navbar .avatar {
+        height: 2rem;
+    }
+
+    .navbar > ul{
+        gap: 2rem;
+    }
+    
+
+    .navbar img {
+        height: 1.25rem;
+    }
+}

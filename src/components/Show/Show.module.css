@@ -18,7 +18,7 @@
 .info {
     margin-top: 8px;
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 300;
     opacity: 0.75;
 }
@@ -39,4 +39,15 @@
     border: 0;
     padding: 10px;
     border-radius: 50%;
+}
+
+@media screen and (min-width: 678px) {
+    .info {
+        font-size: 13px;
+    }
+
+    .bookmarkIcon {
+        top: 1rem;
+        right: 1rem;
+    }
 }

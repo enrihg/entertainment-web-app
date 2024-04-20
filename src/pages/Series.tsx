@@ -10,7 +10,6 @@ function Series() {
             <Header />
             <main>
                 <Search />
-
                 <DisplayShows>
                     <h1>Series!</h1>
                     {data.map((movie) => (

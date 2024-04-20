@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
     return (
-        <header>
+        <header className='header'>
             <nav className='navbar'>
                 <a href="#"><img className='logo' src={logo} alt="logo" /></a>
                 <ul>
