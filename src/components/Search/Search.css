@@ -55,3 +55,9 @@
         font-size: 1.5rem;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .search form {
+        padding-top: 2rem;
+    }
+}

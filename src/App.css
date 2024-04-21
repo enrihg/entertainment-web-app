@@ -25,14 +25,20 @@
 
 main {
   padding-inline: 1rem;
-
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   main {
     padding-inline: 1.5rem;
   }
-};
+}
+
+@media screen and (min-width: 1024px) {
+  #root {
+    flex-direction: row;
+  }
+}
 
 @font-face {
   font-family: 'Outfit';

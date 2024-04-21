@@ -51,3 +51,21 @@
         height: 1.25rem;
     }
 }
+
+@media screen and (min-width: 1024px){
+    .navbar {
+        height: 75vh;
+        width: 6rem;
+        flex-direction: column;
+        padding-block: 2rem;
+        border-radius: 20px;
+    }
+
+    .navbar .avatar {
+        height: 2.5rem;
+    }
+
+    .navbar > ul {
+        flex-direction: column;
+    }
+}

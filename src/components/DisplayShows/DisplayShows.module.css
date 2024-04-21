@@ -7,7 +7,7 @@
 
 h1, h2 {
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 300;
     grid-column-start: span 2;
 }
 
@@ -31,4 +31,21 @@ h3 {
     h3 {
         font-size: 1.125rem;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+ 
+    h1, h2 {
+        /* font-size: 2rem; */
+        grid-column-start: span 4;
+    }
+
+    h3 {
+        /* font-size: 1.125rem; */
+    } 
 }
