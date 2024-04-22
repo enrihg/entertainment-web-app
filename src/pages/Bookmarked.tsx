@@ -12,21 +12,21 @@ function Bookmarked() {
                 <Search />
                 <DisplayShows>
                     <h1>Bookmarked Movies</h1>
-                    {data.map((movie) => (
+                    {/* {data.map((movie) => (
                         movie.category === "Movie" && movie.isBookmarked && <Show
                             // key={???}
-                            movie={movie}
+                            show={movie}
                         />
-                    ))}
+                    ))} */}
                 </DisplayShows>
                 <DisplayShows>
                     <h2>Bookmarked TV Series</h2>
-                    {data.map((movie) => (
+                    {/* {data.map((movie) => (
                         movie.category === "TV Series" && movie.isBookmarked && <Show
                             // key={???}
-                            movie={movie}
+                            show={movie}
                         />
-                    ))}
+                    ))} */}
                 </DisplayShows>
             </main>
         </>
