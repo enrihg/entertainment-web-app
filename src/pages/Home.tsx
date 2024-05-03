@@ -1,6 +1,4 @@
-import Header from "../components/Header/Header"
-import Search from "../components/Search/Search"
-import DisplayShows from "../components/DisplayShows/DisplayShows.tsx"
+import AppLayout from "../components/AppLayout/AppLayout.tsx";
 import Show from "../components/Show/Show.tsx"
 import { useEffect, useState } from "react"
 
@@ -18,22 +16,21 @@ function Home() {
     console.log(shows)
 
     return (
-        <>
-            <Header />
-            <main>
-                <Search />
-                <DisplayShows>
-                    <h1>Trending</h1>
-                    {shows.map((show) => (
-                        <Show key={show.id} show={show}/>
-                    ))}
-                </DisplayShows>
-                <DisplayShows>
-                    <h2>Recommended for you</h2>
-                    <p>????????????</p>
-                </DisplayShows>
-            </main>
-        </>
+        <AppLayout>
+            <section>
+                <h1>Trending</h1>
+                {shows.map((show) => (
+                    <Show key={show.id} show={show} />
+                ))}
+            </section>
+            <section>
+                <h2>Recommended for you</h2>
+                <p>????????????</p>
+            </section>
+        </AppLayout >
+
+
+
     )
 }
 

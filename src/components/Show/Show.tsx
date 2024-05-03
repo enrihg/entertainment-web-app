@@ -7,7 +7,11 @@ type ComponentProps = {
         name: string,
         title: string,
         first_air_date: string,
-        release_date: string
+        release_date: string 
+
+        //ESTOS NOMBRES DE PROPIEDADES HAY QUE CAMBIARLOS Y UNIFICARLOS
+        //DFDSFFSDSDF
+        //SFDFSDFSFSDFSDS
     }
 }
 

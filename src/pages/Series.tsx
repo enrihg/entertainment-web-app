@@ -1,6 +1,4 @@
-import Header from "../components/Header/Header"
-import Search from "../components/Search/Search"
-import DisplayShows from "../components/DisplayShows/DisplayShows.tsx"
+import AppLayout from "../components/AppLayout/AppLayout.tsx";
 import Show from "../components/Show/Show.tsx"
 import { useEffect, useState } from "react"
 
@@ -16,19 +14,14 @@ function Series() {
     }, []);
 
     return (
-        <>
-            <Header />
-            <main>
-                <Search />
-                <DisplayShows>
-                    <h1>Series!</h1>
-                    {series.map((serie) => (
-                        <Show key={serie.id} show={serie}/>
-                    ))}
-                </DisplayShows>
-
-            </main>
-        </>
+        <AppLayout>
+            <section>
+                <h1>Series!</h1>
+                {series.map((serie) => (
+                    <Show key={serie.id} show={serie} />
+                ))}
+            </section>
+        </AppLayout>
     )
 }
 
