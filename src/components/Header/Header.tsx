@@ -16,7 +16,7 @@ function Header() {
                     <li><Link to="/"><img src={iconHome} alt="home" /></Link></li>
                     <li><Link to="/movies"><img src={iconMovies} alt="movies" /></Link></li>
                     <li><Link to="/series"><img src={iconSeries} alt="series" /></Link></li>
-                    <li><Link to="/bookmarked"><img src={iconBookmark} alt="bookmark" /></Link></li>
+                    <li><Link to="/bookmarks"><img src={iconBookmark} alt="bookmarks" /></Link></li>
                 </ul>
                 <a href="#"><img className='avatar' src={avatar} alt="avatar" /></a>
             </nav>

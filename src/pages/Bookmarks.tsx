@@ -2,7 +2,7 @@ import AppLayout from "../components/AppLayout/AppLayout.tsx"
 import data from "../data.ts"
 import Show from "../components/Show/Show.tsx"
 
-function Bookmarked() {
+function Bookmarks() {
     return (
         <AppLayout>
             <section>
@@ -27,4 +27,4 @@ function Bookmarked() {
     )
 }
 
-export default Bookmarked
+export default Bookmarks
