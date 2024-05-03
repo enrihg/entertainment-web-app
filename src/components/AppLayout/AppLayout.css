@@ -1,4 +1,6 @@
 main {
+    padding-inline: 1rem;
+
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -17,8 +19,13 @@ main {
         font-size: 0.875rem;
         font-weight: 500;
     }
+}
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    main {
+        padding-inline: 1.5rem;
+
+
         section {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 1.875rem;
@@ -35,8 +42,10 @@ main {
             font-size: 1.125rem;
         }
     }
+}
 
-    @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+    main {
         section {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 2.5rem;
