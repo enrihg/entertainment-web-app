@@ -28,9 +28,6 @@ function Home() {
                 <p>????????????</p>
             </section>
         </AppLayout >
-
-
-
     )
 }
 

@@ -2,7 +2,11 @@ import Header from "../Header/Header"
 import Search from "../Search/Search"
 import "./AppLayout.css"
 
-function AppLayout({ children }) {
+type ComponentProps = {
+    children? : React.ReactNode;
+}
+
+function AppLayout({ children }: ComponentProps) {
     return (
         <>
             <Header />
@@ -12,8 +16,6 @@ function AppLayout({ children }) {
             </main>
         </>
     )
-
-
 }
 
 export default AppLayout
