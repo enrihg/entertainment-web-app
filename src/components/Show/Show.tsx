@@ -1,5 +1,4 @@
 import style from "./Show.module.css"
-import prueba from "/src/assets/thumbnails/beyond-earth/regular/medium.jpg"
 import iconBookmarkEmpty from '/src/assets/icon-bookmark-empty.svg'
 
 type ComponentProps = {
@@ -7,24 +6,23 @@ type ComponentProps = {
         name: string,
         title: string,
         first_air_date: string,
-        release_date: string 
+        release_date: string,
+        poster_path: string
 
-        //ESTOS NOMBRES DE PROPIEDADES HAY QUE CAMBIARLOS Y UNIFICARLOS
-        //DFDSFFSDSDF
-        //SFDFSDFSFSDFSDS
     }
 }
 
+function Show({ show }: ComponentProps) {
+    const { name, title, first_air_date = "", release_date = "", poster_path: img } = show;
+    const year = first_air_date.substring(0, 4) || release_date.substring(0, 4);
 
-function Show({ show: movie }: ComponentProps) {
-    const { name, title, first_air_date, release_date } = movie;
     return (
         <article className={style.show}>
             <div className={style.thumbnail}>
-                <img src={prueba} alt="picture" />
+                <img src={`https://image.tmdb.org/t/p/original/${img}`} alt="picture" />
                 <button className={style.bookmarkIcon}><img src={iconBookmarkEmpty} alt="bookmark icon" /></button>
             </div>
-            <div className={style.info}><span>{first_air_date || release_date}</span><span>serie/tv</span><span>rating</span></div>
+            <div className={style.info}><span>{year}</span><span>.</span><span>serie/tv</span><span>.</span><span>rating</span></div>
             <h3>{name || title}</h3>
         </article>
     )
