@@ -13,7 +13,7 @@ function Movies() {
     useEffect(function () {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${q}`)
             .then((res) => res.json())
-            .then((data) => { setMovies(data.results); console.log(data.results) })
+            .then((data) => setMovies(data.results))
     }, [q])
 
     useEffect(function () {

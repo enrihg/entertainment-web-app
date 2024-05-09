@@ -13,13 +13,13 @@ function Series() {
     useEffect(function () {
         fetch(`https://api.themoviedb.org/3/search/tv?api_key=${KEY}&query=${q}`)
             .then((res) => res.json())
-            .then((data) => { setSeries(data.results); console.log(data.results) })
+            .then((data) => setSeries(data.results))
     }, [q])
 
     useEffect(function () {
         fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${KEY}`)
             .then((res) => res.json())
-            .then((data) => { setSeries(data.results); console.log(data.results) });
+            .then((data) => setSeries(data.results));
     }, []);
 
     return (

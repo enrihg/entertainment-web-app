@@ -1,0 +1,50 @@
+.showDetails {
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--clr-700);
+    border-radius: 10px;
+}
+
+section:nth-child(1) {
+    display: flex;
+}
+
+section:nth-child(1)>div {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+section:nth-child(2) {
+    padding: 1.5rem 3rem 1.5rem 3rem;
+}
+
+.buttonBack {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 3px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buttonBack>img {
+    width: 24px;
+    height: 24px;
+}
+
+.poster {
+    aspect-ratio: auto;
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p>em {
+    line-height: 1.5;
+}

@@ -7,13 +7,17 @@ const KEY = '51c123f4a024f90c136223859b755364';
 function Home() {
     const [shows, setShows] = useState([]);
 
+    // useEffect(function () {
+    //     (fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`))
+    //         .then((res) => res.json())
+    //         .then((data) => setShows(data.results))
+    // }, [])
+
     useEffect(function () {
         (fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`))
             .then((res) => res.json())
             .then((data) => setShows(data.results))
     }, [])
-
-    console.log(shows)
 
     return (
         <AppLayout>
