@@ -1,6 +1,5 @@
-import { useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams, Link } from "react-router-dom"
 import style from "./ShowDetails.module.css"
 import arrowBackIcon from "../../assets/icon-arrow-back.svg"
 import Loader from "../Loader/Loader";
@@ -10,6 +9,7 @@ function ShowDetails() {
     const [details, setDetails] = useState([])
     const { show, id } = useParams();
     const searchShow = (show === 'movies' && 'movie') || (show === 'series' && 'tv');
+    const navigate = useNavigate();
 
     console.log(`GENRES: ${details.genres}`)
     useEffect(function () {
@@ -32,7 +32,7 @@ function ShowDetails() {
             {isLoading ? <Loader /> :
                 <>
                     <section>
-                        <button className={style.buttonBack}><img src={arrowBackIcon} alt="arrow back" /></button>
+                        <button onClick={() => navigate(`/${show}`)} className={style.buttonBack}><img src={arrowBackIcon} alt="arrow back" /></button>
                         <img className={style.poster} src={`https://image.tmdb.org/t/p/original${details.poster_path}`} alt="poster" />
                         <div>
                             <h1 >{details.name || details.title}</h1>
