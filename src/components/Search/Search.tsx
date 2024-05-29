@@ -16,6 +16,7 @@ function Search() {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${query}`)
             .then((res) => res.json())
             .then((data) => setQuery(data.results))
+            .catch(err => console.error('error:' + err));
     }
 
     return (

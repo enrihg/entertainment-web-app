@@ -20,7 +20,7 @@ function Show({ show }: ComponentProps) {
 
     return (
         <article className={style.show}>
-            <Link to={`${id}`}>
+            <Link to={`watch/${id}`}>
                 <div className={style.thumbnail}>
                     <img src={`https://image.tmdb.org/t/p/original/${img}`} alt="picture" />
                     <button className={style.bookmarkIcon}><img src={iconBookmarkEmpty} alt="bookmark icon" /></button>

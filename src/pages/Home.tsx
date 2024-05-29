@@ -1,35 +1,45 @@
 import AppLayout from "../components/AppLayout/AppLayout.tsx";
 import Show from "../components/Show/Show.tsx"
+import People from "../components/People/People.tsx";
 import { useEffect, useState } from "react"
 
 const KEY = '51c123f4a024f90c136223859b755364';
 
 function Home() {
     const [shows, setShows] = useState([]);
-
-    // useEffect(function () {
-    //     (fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`))
-    //         .then((res) => res.json())
-    //         .then((data) => setShows(data.results))
-    // }, [])
+    const [persons, setPersons] = useState([]);
 
     useEffect(function () {
-        (fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`))
+        (fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${KEY}`))
             .then((res) => res.json())
             .then((data) => setShows(data.results))
+            .catch(err => console.error('error:' + err));
     }, [])
+
+    console.log(shows)
+
+    useEffect(function () {
+        (fetch(`https://api.themoviedb.org/3/trending/person/day?api_key=${KEY}`))
+            .then((res) => res.json())
+            .then((data) => setPersons(data.results))
+            .catch(err => console.error('error:' + err));
+    }, [])
+
+    console.log(persons);
 
     return (
         <AppLayout>
             <section>
-                <h1>Trending</h1>
+                <h1>Trending Shows</h1>
                 {shows.map((show) => (
                     <Show key={show.id} show={show} />
                 ))}
             </section>
             <section>
-                <h2>Recommended for you</h2>
-                <p>????????????</p>
+                <h2>Trending People</h2>
+                {persons.map((person) => (
+                    <People key={person.id} show={person} />
+                ))}
             </section>
         </AppLayout >
     )

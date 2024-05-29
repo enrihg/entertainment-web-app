@@ -32,7 +32,7 @@ function ShowDetails() {
             {isLoading ? <Loader /> :
                 <>
                     <section>
-                        <button onClick={() => navigate(`/${show}`)} className={style.buttonBack}><img src={arrowBackIcon} alt="arrow back" /></button>
+                        {/* <button onClick={() => navigate(`/${show}`)} className={style.buttonBack}><img src={arrowBackIcon} alt="arrow back" /></button> */}
                         <img className={style.poster} src={`https://image.tmdb.org/t/p/original${details.poster_path}`} alt="poster" />
                         <div>
                             <h1 >{details.name || details.title}</h1>
