@@ -10,13 +10,13 @@ type ComponentProps = {
         release_date: string,
         poster_path: string,
         id: string
-
     }
 }
 
 function Show({ show }: ComponentProps) {
     const { name, title, first_air_date = "", release_date = "", poster_path: img, id } = show;
     const year = first_air_date.substring(0, 4) || release_date.substring(0, 4);
+
 
     return (
         <article className={style.show}>

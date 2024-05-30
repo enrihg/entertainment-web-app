@@ -8,12 +8,22 @@ const KEY = '51c123f4a024f90c136223859b755364';
 function Home() {
     const [shows, setShows] = useState([]);
     const [persons, setPersons] = useState([]);
+    // const [isLoading, setIsloading] = useState(false);
 
     useEffect(function () {
-        (fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${KEY}`))
-            .then((res) => res.json())
-            .then((data) => setShows(data.results))
-            .catch(err => console.error('error:' + err));
+        async function fetchShows() {
+            // setIsloading(true);
+            const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${KEY}`)
+            const data = await res.json();
+            setShows(data.results);
+            // setIsloading(false);
+        }
+        fetchShows()
+
+        // (fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${KEY}`))
+        //     .then((res) => res.json())
+        //     .then((data) => setShows(data.results))
+        //     .catch(err => console.error('error:' + err));
     }, [])
 
     console.log(shows)
@@ -35,12 +45,12 @@ function Home() {
                     <Show key={show.id} show={show} />
                 ))}
             </section>
-            <section>
+            {/* <section>
                 <h2>Trending People</h2>
                 {persons.map((person) => (
                     <People key={person.id} show={person} />
                 ))}
-            </section>
+            </section> */}
         </AppLayout >
     )
 }

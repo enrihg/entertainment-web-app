@@ -1,11 +1,9 @@
 .show {
-    /* width: fit-content; */
+    width: fit-content;
 }
 
 .thumbnail {
-    /* height: 220px; */
     position: relative;
-    width: fit-content;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -13,6 +11,7 @@
 .thumbnail > img {
     border-radius: 8px;
     width: 100%;
+    aspect-ratio: 2/3;
 }
 
 .info {
