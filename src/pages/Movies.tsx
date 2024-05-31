@@ -33,7 +33,7 @@ function Movies() {
             <section>
                 <h1>Movies</h1>
                 {movies.map((movie) => (
-                    <Show key={movie.id} show={movie} />
+                    <Show key={movie.id} show={movie} type="Movie"/>
                 ))}
             </section>
             <NavigationButtons pageNumber={pageNumber} url1={url1} url2={url2} />

@@ -8,13 +8,15 @@
     overflow: hidden;
 }
 
-.thumbnail > img {
+.thumbnail>img {
     border-radius: 8px;
     width: 100%;
     aspect-ratio: 2/3;
 }
 
 .info {
+    display: flex;
+    justify-content: space-between;
     margin-top: 8px;
     margin-bottom: 5px;
     font-size: 11px;
@@ -22,8 +24,13 @@
     opacity: 0.75;
 }
 
-.info > span {
+.info>span {
     margin-right: 18px;
+}
+
+.info img {
+    width: 14px;
+    margin-right: 4px;
 }
 
 .bookmarkIcon {

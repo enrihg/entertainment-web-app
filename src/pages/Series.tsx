@@ -33,7 +33,7 @@ function Series() {
             <section>
                 <h1>Series</h1>
                 {series.map((serie) => (
-                    <Show key={serie.id} show={serie} />
+                    <Show key={serie.id} show={serie} type="TV Series" />
                 ))}
             </section>
             <NavigationButtons pageNumber={pageNumber} url1={url1} url2={url2} />
