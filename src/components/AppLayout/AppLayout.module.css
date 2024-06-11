@@ -1,4 +1,9 @@
-main {
+.appLayoutContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
     padding-inline: 1rem;
 
     section {
@@ -22,7 +27,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-    main {
+    .main {
         padding-inline: 1.5rem;
 
 
@@ -45,7 +50,11 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    main {
+    .appLayoutContainer {
+        flex-direction: row;
+    }
+
+    .main {
         section {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 2.5rem;
@@ -65,7 +74,7 @@ main {
 }
 
 @media screen and (min-width: 1280px) {
-    main {
+    .main {
         section {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             gap: 2.5rem;
@@ -85,7 +94,7 @@ main {
 }
 
 @media screen and (min-width: 1536px) {
-    main {
+    .main {
         section {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             gap: 2.5rem;

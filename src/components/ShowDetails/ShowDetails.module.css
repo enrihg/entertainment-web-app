@@ -18,7 +18,7 @@
     padding-inline: 1rem;
 }
 
-/* .buttonBack {
+.buttonBack {
     position: absolute;
     width: 33px;
     height: 33px;
@@ -33,7 +33,7 @@
 .buttonBack>img {
     width: 24px;
     height: 24px;
-} */
+}
 
 
 h1 {

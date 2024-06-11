@@ -1,6 +1,6 @@
 import Header from "../Header/Header"
 import Search from "../Search/Search"
-import "./AppLayout.css"
+import style from "./AppLayout.module.css"
 
 type ComponentProps = {
     children? : React.ReactNode;
@@ -8,13 +8,13 @@ type ComponentProps = {
 
 function AppLayout({ children }: ComponentProps) {
     return (
-        <>
+        <div className={style.appLayoutContainer}>
             <Header />
-            <main>
+            <main className={style.main}>
                 <Search/>
                 {children}
             </main>
-        </>
+        </div>
     )
 }
 

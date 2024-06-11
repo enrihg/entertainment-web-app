@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Link } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import style from "./ShowDetails.module.css"
 import arrowBackIcon from "../../assets/icon-arrow-back.svg"
 import Loader from "../Loader/Loader";
@@ -10,9 +10,8 @@ function ShowDetails() {
     const [casting, setCasting] = useState([]);
     const { show, id } = useParams();
     const searchShow = (show === 'movies' && 'movie') || (show === 'series' && 'tv');
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
-    console.log(`GENRES: ${details.genres}`)
     useEffect(function () {
         async function fetchShow() {
             // setIsloading(true)
@@ -38,8 +37,10 @@ function ShowDetails() {
     return (
         <article className={style.showDetails}>
             {/* {isLoading ? <Loader /> : */}
-            {/* <button onClick={() => navigate(`/${show}`)} className={style.buttonBack}><img src={arrowBackIcon} alt="arrow back" /></button> */}
-            <img className={style.poster} src={`https://image.tmdb.org/t/p/original${details.poster_path}`} alt="poster" />
+            <div>
+                <button onClick={() => navigate(-1)} className={style.buttonBack}><img src={arrowBackIcon} alt="arrow back" /></button>
+                <img className={style.poster} src={`https://image.tmdb.org/t/p/original${details.poster_path}`} alt="poster" />
+            </div>
             <div className={style.detailsContainer}>
                 <h1 >{details.name || details.title}</h1>
                 <p>{details.release_date || details.first_air_date}</p>
