@@ -1,14 +1,15 @@
 import style from "./NavigationButtons.module.css"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 type ComponentProps = {
-    pageNumber: string,
-    url1: string,
-    url2: string
+    show: string,
 }
 
-function NavigationButtons({ pageNumber, url1, url2 }: ComponentProps) {
+function NavigationButtons({ show }: ComponentProps) {
     const navigate = useNavigate();
+    const { pageNumber = "1" } = useParams();
+    const url1 = `/${show}/page/${Number(pageNumber) - 1}`;
+    const url2 = `/${show}/page/${Number(pageNumber) + 1}`;
 
     return (
         <div className={style.buttonContainer}>
