@@ -1,3 +1,15 @@
 .people {
-    background-color: aqua;
+    width: fit-content;
+}
+
+.picture {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.picture>img {
+    border-radius: 8px;
+    width: 100px;
+    aspect-ratio: 2/3;
 }

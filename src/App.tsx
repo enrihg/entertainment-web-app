@@ -9,22 +9,22 @@ import ShowDetails from './components/ShowDetails/ShowDetails'
 
 function App() {
 
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/movies" element={<Movies />} >
-                    <Route path="page/:pageNumber" element={<Movies />} />
-                </Route>
-                <Route path="/series" element={<Series />}>
-                    <Route path="page/:pageNumber" element={<Series />} />
-                </Route>
-                <Route path="/:show/:watch/:id" element={<ShowDetails />} />
-                <Route path="/bookmarks" element={<Bookmarks />} />
-                <Route path="*" element={<PageNotFound />} />
-            </Routes>
-        </BrowserRouter>
-    )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Movies />} >
+          <Route path="page/:pageNumber" element={<Movies />} />
+        </Route>
+        <Route path="/series" element={<Series />}>
+          <Route path="page/:pageNumber" element={<Series />} />
+        </Route>
+        <Route path="/:show/:watch/:id" element={<ShowDetails />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
